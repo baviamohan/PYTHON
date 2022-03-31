@@ -1,10 +1,13 @@
-num=int(input("Enter a number:"))
-def prime(num):
-  for i in range(2,num):
-    if(num%i==0):
-      print("It is not a Prime number")
-      break
+def prime(n):
+    if (n==1):
+        return True
+    elif (n==2):
+        return True;
     else:
-      print("It is a Prime number")
-      break
-prime(num)
+        for x in range(2,n):
+            if(n % x==0):
+                return False
+        return True
+a=int(input("Enter a number:"))            
+print(prime(a))
+
